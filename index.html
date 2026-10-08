@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Special One ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', cursive, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+        }
+
+        h1 {
+            color: #ff4757;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #57606f;
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .heart {
+            font-size: 60px;
+            animation: beat 1s infinite alternate;
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.15); }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            min-height: 50px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        #yesBtn {
+            background-color: #ff4757;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        #noBtn {
+            background-color: #747d8c;
+            color: white;
+            position: absolute;
+            right: 40px;
+        }
+
+        /* Celebration Screen */
+        .celebration {
+            display: none;
+        }
+
+        .celebration h2 {
+            color: #ff4757;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="mainCard">
+        <div class="heart">💖</div>
+        <h1>Hey Beautiful! ✨</h1>
+        <p>Aap meri life ka sabse khoobsurat hissa ho. Kya aap mere saath hamesha rahoge?</p>
+        
+        <div class="buttons">
+            <button id="yesBtn" onclick="acceptLove()">Yes 💖</button>
+            <button id="noBtn" onmouseover="moveNoButton()" onclick="moveNoButton()">No 😜</button>
+        </div>
+    </div>
+
+    <div class="card celebration" id="celebrationCard">
+        <div class="heart">🥰🎉</div>
+        <h2>I Knew It! ❤️</h2>
+        <p>Aapke saath har din special hai. Thank you for being in my life! 😘✨</p>
+    </div>
+
+    <script>
+        // "No" button ko bhagane ka function
+        function moveNoButton() {
+            const noBtn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - 100) - (window.innerWidth / 2) + 50;
+            const y = Math.random() * (window.innerHeight - 100) - (window.innerHeight / 2) + 50;
+            
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        }
+
+        // "Yes" click hone par celebration screen
+        function acceptLove() {
+            document.getElementById('mainCard').style.display = 'none';
+            document.getElementById('celebrationCard').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
