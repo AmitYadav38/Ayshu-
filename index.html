@@ -152,8 +152,17 @@
             <button class="btn" onclick="recordAnswer('Q3_FinalAnswer', 'YES! Always Besties 🥳', 6)">HECK YES! 🥳</button>
         </div>
 
-        <!-- Step 6 -->
+        <!-- Step 6: Surprise Feedback -->
         <div class="card-step" id="step6">
+            <h1>Ek Aakhri Cheez! 🎁</h1>
+            <p class="subtitle">Mera yeh chhota sa surprise tumhe kaisa laga?</p>
+            <div class="quiz-option" onclick="recordAnswer('Q4_SurpriseFeedback', 'Bohot Pyaara Tha! 🥰', 7)">Bohot Pyaara Tha! 🥰</div>
+            <div class="quiz-option" onclick="recordAnswer('Q4_SurpriseFeedback', 'Bahut Mast Code Bana Diya 🚀', 7)">Bahut Mast Code Bana Diya 🚀</div>
+            <div class="quiz-option" onclick="recordAnswer('Q4_SurpriseFeedback', 'Maza Aa Gaya Bestie! 💯', 7)">Maza Aa Gaya Bestie! 💯</div>
+        </div>
+
+        <!-- Step 7: Final Thank You -->
+        <div class="card-step" id="step7">
             <h1>Yayyy! 🎉🥳</h1>
             <p class="subtitle">You're the best, Ayshu! 🥂✨</p>
             <p>Thanks for being such an awesome friend! ❤️</p>
@@ -171,8 +180,8 @@
         function recordAnswer(question, answer, nextStepNum) {
             answers[question] = answer;
             
-            // Final step par automatic Formspree ko data bhej do
-            if (nextStepNum === 6) {
+            // Jab Step 7 par jaye tab Formspree ko saare answers bhej do
+            if (nextStepNum === 7) {
                 sendDataToEmail();
             }
             
