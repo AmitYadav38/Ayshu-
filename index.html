@@ -3,201 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Ayshu ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>For My Ayshu ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
         }
 
-        body {
-            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        body { 
+            background: linear-gradient(135deg, #ff758c, #ff7eb3); 
+            font-family: 'Poppins', sans-serif; 
+            min-height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px; 
         }
 
-        .container {
-            background: rgba(255, 255, 255, 0.95);
-            max-width: 500px;
-            width: 100%;
-            border-radius: 24px;
-            padding: 30px 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        .container { 
+            background: rgba(255, 255, 255, 0.95); 
+            max-width: 450px; 
+            width: 100%; 
+            border-radius: 20px; 
+            padding: 30px 20px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+            text-align: center; 
         }
 
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            color: #ff2e63;
-            font-size: 38px;
-            margin-bottom: 10px;
+        h1 { 
+            color: #ff2e63; 
+            font-size: 28px; 
+            margin-bottom: 10px; 
         }
 
-        p.subtitle {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 25px;
+        p.subtitle { 
+            font-size: 14px; 
+            color: #666; 
+            margin-bottom: 20px; 
         }
 
-        .card-step {
-            display: none;
-            animation: fadeIn 0.5s ease-in-out forwards;
+        .card-step { 
+            display: none; 
         }
 
-        .card-step.active {
-            display: block;
+        .card-step.active { 
+            display: block; 
+            animation: fadeIn 0.4s ease-in-out;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .btn {
-            background: linear-gradient(45deg, #ff2e63, #ff007f);
-            color: white;
-            border: none;
-            padding: 12px 28px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 46, 99, 0.4);
-            margin-top: 15px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-        }
-
-        .quiz-option {
-            background: #fff0f3;
-            border: 2px solid #ffccd5;
-            padding: 12px;
-            border-radius: 15px;
-            margin: 10px 0;
-            cursor: pointer;
-            font-weight: 500;
+        .btn { 
+            background: #ff2e63; 
+            color: white; 
+            border: none; 
+            padding: 12px 25px; 
+            font-size: 15px; 
+            font-weight: 600; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            margin-top: 15px; 
             transition: 0.2s;
         }
 
-        .quiz-option:hover {
-            background: #ff4d6d;
-            color: white;
+        .btn:hover {
+            transform: scale(1.03);
+            background: #e02553;
+        }
+
+        .quiz-option { 
+            background: #fff0f3; 
+            border: 2px solid #ffccd5; 
+            padding: 12px; 
+            border-radius: 12px; 
+            margin: 10px 0; 
+            cursor: pointer; 
+            font-weight: 500; 
+            transition: 0.2s;
+        }
+
+        .quiz-option:hover { 
+            background: #ff4d6d; 
+            color: white; 
             border-color: #ff4d6d;
         }
 
-        .love-letter {
-            text-align: left;
-            background: #fff5f7;
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 5px solid #ff2e63;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-top: 15px;
-        }
-
-        .floating-heart {
-            position: absolute;
-            color: #ff2e63;
-            animation: float 4s infinite linear;
-            opacity: 0.6;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        .note-box { 
+            text-align: left; 
+            background: #fff5f7; 
+            padding: 18px; 
+            border-radius: 12px; 
+            border-left: 4px solid #ff2e63; 
+            font-size: 14px; 
+            line-height: 1.6; 
+            margin-top: 15px; 
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Step 1: Welcome -->
+        <!-- Step 1 -->
         <div class="card-step active" id="step1">
             <h1>Hey Ayshu! ✨</h1>
             <p class="subtitle">Aishwarya, tumhare liye ek chhota sa surprise...</p>
-            <p>Kuch sawalon ke jawab dogi? 😉</p>
-            <button class="btn" onclick="nextStep(2)">Start Quiz ❤️</button>
+            <p>Kuch quick sawalon ke jawab dogi? 😉</p>
+            <button class="btn" onclick="nextStep(2)">Start Quiz 🚀</button>
         </div>
 
-        <!-- Step 2: Interactive Question 1 -->
+        <!-- Step 2 -->
         <div class="card-step" id="step2">
             <h1>Sawal 1 💭</h1>
-            <p class="subtitle">Duniya ki sabse pyaari aur khoobsurat ladki kaun hai?</p>
-            <div class="quiz-option" onclick="nextStep(3)">Aishwarya (Ayshu) 🥰</div>
-            <div class="quiz-option" onclick="nextStep(3)">Ayshu ❤️</div>
+            <p class="subtitle">Duniya ki sabse cool aur pyaari dost kaun hai?</p>
+            <div class="quiz-option" onclick="recordAnswer('Q1_BestFriend', 'Aishwarya (Ayshu)', 3)">Aishwarya (Ayshu) 😎</div>
+            <div class="quiz-option" onclick="recordAnswer('Q1_BestFriend', 'Meri Ayshu', 3)">Meri Ayshu ✨</div>
+            <div class="quiz-option" onclick="recordAnswer('Q1_BestFriend', 'Dono hi!', 3)">Dono hi! 💖</div>
         </div>
 
-        <!-- Step 3: Interactive Question 2 -->
+        <!-- Step 3 -->
         <div class="card-step" id="step3">
-            <h1>Sawal 2 🌹</h1>
-            <p class="subtitle">Jab main 'Ayshu' bolta hoon toh tumhare chehre par kya aata hai?</p>
-            <div class="quiz-option" onclick="nextStep(4)">Ek badi si Muskaan 😄</div>
-            <div class="quiz-option" onclick="nextStep(4)">Bohot sara Pyaar ❤️</div>
-            <div class="quiz-option" onclick="nextStep(4)">Dono! 😘</div>
+            <h1>Sawal 2 ☕</h1>
+            <p class="subtitle">Jab hum baat karte hain toh sabse accha kya lagta hai?</p>
+            <div class="quiz-option" onclick="recordAnswer('Q2_FavoriteThing', 'Tumhari baatein aur smile', 4)">Tumhari baatein aur smile 😄</div>
+            <div class="quiz-option" onclick="recordAnswer('Q2_FavoriteThing', 'Tumhara crazy humor', 4)">Tumhara crazy humor 🤪</div>
+            <div class="quiz-option" onclick="recordAnswer('Q2_FavoriteThing', 'Sab kuch accha lagta hai', 4)">Sab kuch accha lagta hai ❤️</div>
         </div>
 
-        <!-- Step 4: Special Note -->
+        <!-- Step 4 -->
         <div class="card-step" id="step4">
-            <h1>For My Dearest Ayshu 💌</h1>
-            <div class="love-letter">
-                Dear <b>Aishwarya</b>,<br><br>
+            <h1>For My Bestie Ayshu 💫</h1>
+            <div class="note-box">
+                Hey <b>Ayshu</b>!<br><br>
                 Bas aise hi baith kar soch raha tha ki tum meri life me kitni awesome dost ho. Tumse baat karke mood instant accha ho jata hai aur tumhari cute baatein sunna ek alag hi vibe hai! <br><br>
                 Thank you hamesha itni acchi listener aur best friend bane rehne ke liye. Bas chahta hoon ki tumhare chehre par yeh smile hamesha rahe! 🌟✨
-            💕
             </div>
-                <button class="btn" onclick="nextStep(5)">One Final Question... 💍</button>
+            <button class="btn" onclick="nextStep(5)">One Final Question... 😉</button>
         </div>
 
-        <!-- Step 5: Proposal Decision -->
+        <!-- Step 5 -->
         <div class="card-step" id="step5">
-            <h1>Ayshu... ❤️</h1>
-            <p style="font-size: 18px; margin: 20px 0;">Kya tum meri life ki permanent happiness banogi?</p>
-            <button class="btn" style="font-size: 18px; padding: 15px 35px;" onclick="nextStep(6)">YES! Forever & Always 💖</button>
+            <h1>Ayshu... 🥂</h1>
+            <p style="font-size: 16px; margin: 20px 0;">Kya hum hamesha aise hi best friends aur ek doosre ke special partner-in-crime bane rahein?</p>
+            <button class="btn" onclick="recordAnswer('Q3_FinalAnswer', 'YES! Always Besties 🥳', 6)">HECK YES! 🥳</button>
         </div>
 
-        <!-- Step 6: Celebration Page -->
+        <!-- Step 6 -->
         <div class="card-step" id="step6">
-            <h1>Yayyy! 🎉🥰</h1>
-            <p class="subtitle">I Love You So Much, Ayshu! ❤️</p>
-            <p>Tumhare saath har din ek festival jaisa hai! 😘✨</p>
+            <h1>Yayyy! 🎉🥳</h1>
+            <p class="subtitle">You're the best, Ayshu! 🥂✨</p>
+            <p>Thanks for being such an awesome friend! ❤️</p>
         </div>
     </div>
 
     <script>
-        function nextStep(stepNumber) {
-            document.querySelectorAll('.card-step').forEach(step => {
-                step.classList.remove('active');
-            });
-            document.getElementById('step' + stepNumber).classList.add('active');
+        let answers = {};
+
+        function nextStep(stepNum) {
+            document.querySelectorAll('.card-step').forEach(s => s.classList.remove('active'));
+            document.getElementById('step' + stepNum).classList.add('active');
         }
 
-        // Floating Hearts Effect
-        setInterval(() => {
-            const heart = document.createElement('div');
-            heart.classList.add('floating-heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.fontSizes = (Math.random() * 20 + 10) + 'px';
-            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            document.body.appendChild(heart);
+        function recordAnswer(question, answer, nextStepNum) {
+            answers[question] = answer;
+            
+            // Final step par automatic Formspree ko data bhej do
+            if (nextStepNum === 6) {
+                sendDataToEmail();
+            }
+            
+            nextStep(nextStepNum);
+        }
 
-            setTimeout(() => {
-                heart.remove();
-            }, 4000);
-        }, 500);
+        function sendDataToEmail() {
+            fetch("https://formspree.io/f/xdeagrdj", {
+                method: "POST",
+                headers: { 
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json' 
+                },
+                body: JSON.stringify(answers)
+            }).catch(err => console.log(err));
+        }
     </script>
 </body>
 </html>
